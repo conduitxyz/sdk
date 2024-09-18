@@ -1,6 +1,6 @@
 const envURLMapping = {
     "conduit" : "https://api.conduit.xyz/public/network/metadata/",
-    "conduit-staging" : "https://api.staging.conduit.xyz/public/network/metadata/",
+    "conduit-staging" : "https://api.conduit-stg.xyz/public/network/metadata/",
     "conduit-localhost" : "http://localhost:8080/public/network/metadata/",
 }
 
