@@ -13,7 +13,7 @@ describe('config', () => {
     describe('getStagingURL', () => {
         it('should return the correct staging url', () => {
             const url = getConfigURL("conduit-staging:slug_here");
-            expect(url).to.equal(`https://api.staging.conduit.xyz/public/network/metadata/slug_here`)
+            expect(url).to.equal(`https://api.conduit-stg.xyz/public/network/metadata/slug_here`)
         })
     })
 
