@@ -1,6 +1,6 @@
 {
   "name": "@conduitxyz/sdk",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "[Conduit] Tools for working with Conduit chains",
   "main": "dist/index",
   "types": "dist/index",
