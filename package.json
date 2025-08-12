@@ -19,7 +19,7 @@
   "scripts": {
     "all": "yarn clean && yarn build && yarn test",
     "build": "tsc -p tsconfig.json",
-    "test": "ts-mocha -p tsconfig.json test/**/*.spec.ts",
+    "test": "vitest",
     "release": "yarn build && changeset publish"
   },
   "homepage": "https://github.com/conduit-xyz/sdk#readme",
@@ -27,14 +27,7 @@
     "type": "git",
     "url": "git+https://github.com/conduit-xyz/sdk.git"
   },
-  "devDependencies": {
-    "@types/expect": "^24.3.0",
-    "@types/mocha": "^10.0.1",
-    "chai-as-promised": "^7.1.1",
-    "mocha": "^10.2.0",
-    "ts-mocha": "^10.0.0",
-    "typedoc": "^0.22.13"
-  },
+  "devDependencies": {},
   "dependencies": {
     "@changesets/cli": "^2.29.5",
     "@eth-optimism/sdk": "^1.8.0",
