@@ -1,7 +1,15 @@
 {
   "name": "@conduitxyz/sdk",
   "version": "0.0.5",
-  "description": "[Conduit] Tools for working with Conduit chains",
+  "license": "MIT",
+  "description": "Tools for working with Conduit chains",
+  "author": "ConduitXYZ Inc.",
+  "keywords": [
+    "conduit",
+    "ethereum",
+    "sdk"
+  ],
+  "type": "commonjs",
   "main": "dist/index",
   "types": "dist/index",
   "files": [
@@ -14,14 +22,7 @@
     "test": "ts-mocha -p tsconfig.json test/**/*.spec.ts",
     "release": "yarn build && changeset publish"
   },
-  "keywords": [
-    "conduit",
-    "ethereum",
-    "sdk"
-  ],
   "homepage": "https://github.com/conduit-xyz/sdk#readme",
-  "license": "MIT",
-  "author": "ConduitXYZ, Inc.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/conduit-xyz/sdk.git"
