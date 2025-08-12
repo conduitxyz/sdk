@@ -9,7 +9,6 @@
     "ethereum",
     "sdk"
   ],
-  "type": "commonjs",
   "main": "dist/index",
   "types": "dist/index",
   "files": [
