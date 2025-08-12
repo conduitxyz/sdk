@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "all": "yarn clean && yarn build && yarn test",
-    "build": "del-cli dist && tsc",
+    "build": "del-cli dist && tsc -p tsconfig.json",
     "test": "vitest run",
     "release": "yarn build && changeset publish"
   },
