@@ -8,6 +8,7 @@ export interface OptimismL1Addresses {
     L1StandardBridge:       string,
     OptimismPortal:         string,
     L2OutputOracle:         string,
+    OptimismPortal2:        string,        
     DisputeGameFactory:     string,
     FaultDisputeGame:       string,
 
