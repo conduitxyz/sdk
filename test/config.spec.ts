@@ -26,7 +26,7 @@ describe('config', () => {
 
     describe('throws error', () => {
         it('should return an error for a bad prefix', () => {
-            expect(getConfigURL.bind(getConfigURL, "conduit-bad-prefix:slug_here")).to.throw('malformed slug. Prefix must be oneof [conduit, conduit-staging, conduit-localhost]');
+            expect(getConfigURL.bind(getConfigURL, "conduit-bad-prefix:slug_here")).to.throw('malformed slug. Prefix must be one of [conduit, conduit-staging, conduit-localhost]');
         })
 
         it('should return an error for a malformed slug', () => {
