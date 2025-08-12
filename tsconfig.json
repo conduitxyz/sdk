@@ -1,29 +1,25 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es2017",
-        "sourceMap": true,
-        "esModuleInterop": true,
-        "composite": true,
-        "resolveJsonModule": true,
-        "declaration": true,
-        "noImplicitAny": false,
-        "removeComments": true,
-        "noLib": false,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "typeRoots": [
-            "node_modules/@types"
-        ],
-        "rootDir": "./src",
-        "outDir": "./dist"
-    },
-    "exclude": [
-        "node_modules",
-        "dist"
-    ],
-    "include": [
-      "src/**/*"
-    ]
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2017",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    /* Strictness */
+    "strict": false,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    /* If transpiling with TypeScript: */
+    "module": "commonjs",
+    "sourceMap": true,
+    /* AND if you're building for a library: */
+    "declaration": true,
+    /* Overrides */
+    "outDir": "dist"
+  },
+  "exclude": ["node_modules"],
+  "include": ["src"]
 }
-  
