@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write # Required for OIDC
+  packages: read
+  repository-projects: read
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+      pull-requests: write
+      repository-projects: write
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 18.x
+        uses: actions/setup-node@v4
+        with:
+          cache: yarn
+          node-version: 18.x
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: yarn release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
