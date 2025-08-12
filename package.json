@@ -1,7 +1,14 @@
 {
   "name": "@conduitxyz/sdk",
   "version": "0.0.5",
-  "description": "[Conduit] Tools for working with Conduit chains",
+  "license": "MIT",
+  "description": "Tools for working with Conduit chains",
+  "author": "ConduitXYZ Inc.",
+  "keywords": [
+    "conduit",
+    "ethereum",
+    "sdk"
+  ],
   "main": "dist/index",
   "types": "dist/index",
   "files": [
@@ -11,33 +18,20 @@
   "scripts": {
     "all": "yarn clean && yarn build && yarn test",
     "build": "tsc -p tsconfig.json",
-    "test": "ts-mocha -p tsconfig.json test/**/*.spec.ts",
+    "test": "vitest run",
     "release": "yarn build && changeset publish"
   },
-  "keywords": [
-    "conduit",
-    "ethereum",
-    "sdk"
-  ],
   "homepage": "https://github.com/conduit-xyz/sdk#readme",
-  "license": "MIT",
-  "author": "ConduitXYZ, Inc.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/conduit-xyz/sdk.git"
   },
-  "devDependencies": {
-    "@types/expect": "^24.3.0",
-    "@types/mocha": "^10.0.1",
-    "chai-as-promised": "^7.1.1",
-    "mocha": "^10.2.0",
-    "ts-mocha": "^10.0.0",
-    "typedoc": "^0.22.13"
-  },
   "dependencies": {
     "@changesets/cli": "^2.29.5",
     "@eth-optimism/sdk": "^1.8.0",
-    "node-fetch": "2",
-    "typescript": "^4.9.4"
-  }
+    "node-fetch": "^2.7.0",
+    "typescript": "^5.9.2",
+    "vitest": "2.1.9"
+  },
+  "devDependencies": {}
 }

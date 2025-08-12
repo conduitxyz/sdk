@@ -1,5 +1,5 @@
-const optimismSDK = require("@eth-optimism/sdk")
-const fetch = require('node-fetch');
+import optimismSDK from "@eth-optimism/sdk";
+import fetch from 'node-fetch';
 import { getConfigURL } from './config/config';
 
 export interface OptimismL1Addresses {

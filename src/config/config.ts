@@ -13,7 +13,7 @@ export const getConfigURL = (
     }
 
     if (!(tokens[0] in envURLMapping)) {
-        throw Error('malformed slug. Prefix must be oneof [conduit, conduit-staging, conduit-localhost]')
+        throw Error('malformed slug. Prefix must be one of [conduit, conduit-staging, conduit-localhost]')
     }
 
     return envURLMapping[tokens[0]] + tokens[1]
