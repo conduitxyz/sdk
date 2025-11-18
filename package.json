@@ -21,10 +21,10 @@
     "test": "vitest run",
     "release": "yarn build && changeset publish"
   },
-  "homepage": "https://github.com/conduit-xyz/sdk#readme",
+  "homepage": "https://github.com/conduitxyz/sdk#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/conduit-xyz/sdk.git"
+    "url": "git+https://github.com/conduitxyz/sdk.git"
   },
   "dependencies": {
     "@changesets/cli": "^2.29.5",
