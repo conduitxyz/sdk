@@ -25,17 +25,15 @@ jobs:
       pull-requests: write
       repository-projects: write
     steps:
-      - name: Clone repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js 18.x
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           cache: yarn
           node-version: 18.x
+          registry-url: "https://registry.npmjs.org"
 
-      - name: Install Dependencies
-        run: yarn
+      - run: yarn install
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
@@ -44,4 +42,3 @@ jobs:
           publish: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
