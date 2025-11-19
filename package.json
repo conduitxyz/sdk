@@ -1,6 +1,6 @@
 {
   "name": "@conduitxyz/sdk",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "description": "Tools for working with Conduit chains",
   "author": "Conduit XYZ Inc.",
