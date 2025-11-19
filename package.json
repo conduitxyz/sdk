@@ -3,7 +3,10 @@
   "version": "0.0.6",
   "license": "MIT",
   "description": "Tools for working with Conduit chains",
-  "author": "ConduitXYZ Inc.",
+  "author": "Conduit XYZ Inc.",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "conduit",
     "ethereum",
