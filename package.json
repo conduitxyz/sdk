@@ -19,10 +19,9 @@
     "src/*"
   ],
   "scripts": {
-    "all": "yarn clean && yarn build && yarn test",
     "build": "tsc -p tsconfig.json",
     "test": "vitest run",
-    "release": "yarn build && changeset publish"
+    "release": "npm run build && changeset publish"
   },
   "homepage": "https://github.com/conduitxyz/sdk#readme",
   "repository": {

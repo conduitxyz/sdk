@@ -24,16 +24,14 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          cache: yarn
+          cache: npm
           node-version: 18.x
-          registry-url: "https://registry.npmjs.org"
+          registry-url: https://registry.npmjs.org
+      
+      - run: npm install -g npm@latest
 
-      - run: yarn install
+      - run: npm ci
 
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          publish: yarn build && yarn npm publish --access public
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm run build --if-present
+
+      - run: npm publish --access public
